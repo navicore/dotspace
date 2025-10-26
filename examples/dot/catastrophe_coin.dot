@@ -1,0 +1,57 @@
+digraph CatastropheCoinAlbum {
+    // Graph properties
+    rankdir=LR;
+    compound=true;
+
+    "cat_coin_album" [label="Catastrophe Coin Album", type="track", level="0", fillcolor="#4A90E2"];
+
+    // Team structure using subgraphs
+    subgraph cluster_side_a {
+        label="Side A";
+        style="rounded, filled";
+        fillcolor="#E6F3FF";
+        fontsi:ze=14;
+        fontname="Arial Bold";
+
+        "ny_people" [label="A System for New York People", type="track", level="2", fillcolor="#4A90E2"];
+        "prime_numbers" [label="Prime Numbers", type="track", level="1", fillcolor="#5BA3F5"];
+        "m_prime_numbers" [label="Muliplying Prime Numbers", type="track", level="1", fillcolor="#5BA3F5"];
+    }
+
+    subgraph cluster_side_b {
+        label="Side B";
+        style="rounded, filled";
+        fillcolor="#FFE6F0";
+        fontsize=14;
+        fontname="Arial Bold";
+
+        "two_hundred_dlrs" [label="200 Dollars", type="track", level="2", fillcolor="#E91E63"];
+        "catcoin" [label="Catastrophe Coin", type="track", level="1", fillcolor="#F06292"];
+        "south_seattle" [label="South Seattle", type="track", level="1", fillcolor="#F06292"];
+        "compound" [label="The Compound", type="track", level="1", fillcolor="#F06292"];
+    }
+
+    // Collaboration relationships using edges
+    // Product defines requirements
+    "ny_people" -> "prime_numbers" [label="Next"];
+    "cat_coin_album" -> "ny_people" [label="Play"];
+    "ny_people" -> "two_hundred_dlrs" [label="Over"];
+    "prime_numbers" -> "m_prime_numbers" [label="Next"];
+    "cat_coin_album" -> "prime_numbers" [label="Play"];
+    "m_prime_numbers" -> "two_hundred_dlrs" [label="Next"];
+    "cat_coin_album" -> "m_prime_numbers" [label="Play"];
+    "two_hundred_dlrs" -> "catcoin" [label="Next"];
+    "cat_coin_album" -> "two_hundred_dlrs" [label="Play"];
+    "catcoin" -> "south_seattle" [label="Next"];
+    "cat_coin_album" -> "catcoin" [label="Play"];
+    "south_seattle" -> "compound" [label="Next"];
+    "cat_coin_album" -> "south_seattle" [label="Play"];
+    "compound" -> "ny_people" [label="Over"];
+    "cat_coin_album" -> "compound" [label="Play"];
+
+    // Add a title
+    label="Catastrophe Coin Tracks";
+    fontsize=16;
+    fontname="Arial Bold";
+    labelloc="t";
+}
