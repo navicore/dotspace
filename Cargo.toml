@@ -11,7 +11,7 @@ keywords = ["graphviz", "dot", "visualization", "3d", "interactive"]
 categories = ["visualization", "graphics"]
 
 [dependencies]
-bevy = "0.16"
+bevy = "0.17"
 bevy_panorbit_camera = "0.26"
 dotparser = "0.3"
 petgraph = "0.8"
