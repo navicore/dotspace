@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     if: startsWith(github.ref, 'refs/tags/v')
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           # Use a PAT so the commit will trigger other workflows
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
