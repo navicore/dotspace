@@ -1,3 +1,8 @@
+<!-- ghmig:moved -->
+> **This repository has moved to [https://git.navicore.tech/navicore/dotspace](https://git.navicore.tech/navicore/dotspace).**
+>
+> The GitHub copy is archived and no longer maintained.
+
 [![Release with Auto Version (PAT)](https://github.com/navicore/dotspace/actions/workflows/release.yml/badge.svg)](https://github.com/navicore/dotspace/actions/workflows/release.yml)
 [![Dependabot Updates](https://github.com/navicore/dotspace/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/navicore/dotspace/actions/workflows/dependabot/dependabot-updates)
 
@@ -224,4 +229,3 @@ Note: twintalk handles all system-specific integrations (IoT, Kubernetes, logist
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
